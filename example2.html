@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="history_manip.js"></script>
+	</head>
+	<body>
+		<a class="action" href="example3.html">To Page 3</a>
+	
+		<script>
+			window.logHistoryInfo = 1;
+	
+			document.addEventListener('onBack', function(e) {
+				alert("back");
+			}, false);
+			document.addEventListener('onForward', function(e) {
+				alert("forward");
+			}, false);
+			document.addEventListener('onRefresh', function(e) {
+				alert("refresh");
+			}, false);
+			document.addEventListener('onUnknownAction', function(e) {
+				ClearSession();
+				alert("Unknown Action");
+			}, false);
+		</script>
+	
+	</body>
+</html>
